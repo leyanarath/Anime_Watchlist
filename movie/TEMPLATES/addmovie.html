@@ -1,0 +1,28 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-4"></div>
+        <div class="col-8">
+            <br><br>
+        <form action="" method="post" enctype="multipart/form-data">
+            {% csrf_token%}
+            <fieldset>
+                <legend>Anime Registration Form</legend>
+            <label class="form-label">Anime name</label>
+            <input type="text" class="form-control" name="aname">
+            <label class="form-label">Anime discription</label>
+                <textarea class="form-control" name="desc"></textarea>
+            <label class="form-label">Anime more details</label>
+                <textarea class="form-control" name="mdesc"></textarea>
+            <label class="form-label">Anime Wallpaper</label>
+                <input type="file" class="form-control" name="img">
+                <br>
+                <button type="submit" class="btn btn-primary">Submit</button>
+                <button type="reset" class="btn btn-danger">Reset</button>
+            </fieldset>
+        </form>
+        </div>
+    </div>
+</div>
+{% endblock %}

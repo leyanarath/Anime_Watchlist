@@ -1,0 +1,23 @@
+{% extends 'index.html' %}
+{% block body %}
+<div class="container-fulid">
+    <div class="row">
+        <div class="col-3">
+
+            <img src="{{ movielist.img.url }}" style="width:270px">
+            <br>
+            <div class="btn btn-group ">
+            <button class="btn btn-outline-warning me-5"><a href="{% url 'movieapp:updatem' movielist.id %}" class="text-warning">Update</a></button>
+            <button class="btn btn-outline-danger me-1"><a href="{% url 'movieapp:deletem' movielist.id %}" class="text-danger">Delete</a></button>
+            </div>
+        </div>
+        <div class="col-9">
+            <div class="card">
+                <div class="card-header">{{ movielist.name }}</div>
+                <div class="body">{{ movielist.desc }}{{movielist.mdesc}}</div>
+            </div>
+        </div>
+
+    </div>
+</div>
+{% endblock %}
